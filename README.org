@@ -1,0 +1,48 @@
+#+STARTUP: indent
+#+TITLE: Linkmap.el
+#+AUTHOR: aJchemist
+#+DATE: [2014-11-16 Sun 19:58]
+
+* .link_map
+:PROPERTIES:
+:T_START:  <2014-11-16 Sun 19:58>
+:END:
+#+BEGIN_SRC fundamental
+  ;;; LEFT_TABLE_FILE_NAME
+
+  (RECORD RECORD ...)
+#+END_SRC
+
+- LEFT_TABLE_FILE_NAME :: filename
+- RECORD :: `list' data
+- (car RECORD) :: boolean which means whether link is relative or absolute. t is relative.
+- (cdr RECORD) :: link map
+  - (cadr RECORD) :: source
+  - (cddr RECORD) :: target
+
+#+NAME: Example 1
+#+BEGIN_SRC fundamental
+  ;;;
+
+  ((t "lisp/el" . "~/.emacs.d")
+   (t "lisp/cl" . "~/.common-lisp.d")
+   (t "texmf" . "~/texmf")
+   (t "bash.d" . "~/.bash.d")
+   (t "mpv" . "~/.config/mpv")
+   (t "inputrc" . "~/.inputrc")
+   (t "telnetrc" . "~/.telnetrc")
+   (t "gitconfig" . "~/.gitconfig"))
+#+END_SRC
+
+#+NAME: Example 2
+#+BEGIN_SRC fundamental
+  ;;; ~/usloads/.link_map
+
+  ((t "emacs" . "~/.emacs")
+   (nil "emacs.org" . "~/doc/comp.*/comp.emacs.org"))
+#+END_SRC
+
+* M-x lm-table-check
+:PROPERTIES:
+:T_START:  <2014-11-16 Sun 20:08>
+:END:

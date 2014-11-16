@@ -20,6 +20,7 @@
   - (cadr RECORD) :: source
   - (cddr RECORD) :: target
 
+** Example 1
 #+NAME: Example 1
 #+BEGIN_SRC fundamental
   ;;;
@@ -34,6 +35,7 @@
    (t "gitconfig" . "~/.gitconfig"))
 #+END_SRC
 
+** Example 2
 #+NAME: Example 2
 #+BEGIN_SRC fundamental
   ;;; ~/usloads/.link_map
